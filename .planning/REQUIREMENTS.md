@@ -70,21 +70,21 @@ Requirements for issues #4-#8. Each maps to one roadmap phase.
 
 ### Notifications & Logging (#8)
 
-- [ ] **NOTF-01**: Facade provides NotifyUser and NotifyOrderStatusChanged methods
-- [ ] **NOTF-02**: Facade internally uses ConsoleNotifier and FileNotifier subsystems
-- [ ] **NOTF-03**: POST /api/notifications/send sends notification via facade
-- [ ] **NOTF-04**: Proxy wraps Logger interface with lazy initialization
-- [ ] **NOTF-05**: LoggerProxy counts log entries (GetLogCount)
-- [ ] **NOTF-06**: LoggerProxy filters by log level (info, warn, error)
-- [ ] **NOTF-07**: GET /api/logs?level= returns filtered log entries
-- [ ] **NOTF-08**: GET /api/logs/stats returns log counts by level
-- [ ] **NOTF-09**: Bridge separates Formatter abstraction from OutputWriter implementation
-- [ ] **NOTF-10**: TextFormatter and JSONFormatter as abstraction variants
-- [ ] **NOTF-11**: ConsoleWriter and FileWriter as implementor variants
-- [ ] **NOTF-12**: Unit tests for Facade (multi-channel notification)
-- [ ] **NOTF-13**: Unit tests for Proxy (lazy init, counter, level filtering)
-- [ ] **NOTF-14**: Unit tests for Bridge (all formatter+writer combinations)
-- [ ] **NOTF-15**: HTTP handler tests for notification and logging endpoints
+- [x] **NOTF-01**: Facade provides NotifyUser and NotifyOrderStatusChanged methods
+- [x] **NOTF-02**: Facade internally uses ConsoleNotifier and FileNotifier subsystems
+- [x] **NOTF-03**: POST /api/notifications/send sends notification via facade
+- [x] **NOTF-04**: Proxy wraps Logger interface with lazy initialization
+- [x] **NOTF-05**: LoggerProxy counts log entries (GetLogCount)
+- [x] **NOTF-06**: LoggerProxy filters by log level (info, warn, error)
+- [x] **NOTF-07**: GET /api/logs?level= returns filtered log entries
+- [x] **NOTF-08**: GET /api/logs/stats returns log counts by level
+- [x] **NOTF-09**: Bridge separates Formatter abstraction from OutputWriter implementation
+- [x] **NOTF-10**: TextFormatter and JSONFormatter as abstraction variants
+- [x] **NOTF-11**: ConsoleWriter and FileWriter as implementor variants
+- [x] **NOTF-12**: Unit tests for Facade (multi-channel notification)
+- [x] **NOTF-13**: Unit tests for Proxy (lazy init, counter, level filtering)
+- [x] **NOTF-14**: Unit tests for Bridge (all formatter+writer combinations)
+- [x] **NOTF-15**: HTTP handler tests for notification and logging endpoints
 
 ## v2 Requirements
 
@@ -162,21 +162,21 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CART-11 | Phase 4 | Complete |
 | CART-12 | Phase 4 | Complete |
 | CART-13 | Phase 4 | Complete |
-| NOTF-01 | Phase 5 | Pending |
-| NOTF-02 | Phase 5 | Pending |
-| NOTF-03 | Phase 5 | Pending |
-| NOTF-04 | Phase 5 | Pending |
-| NOTF-05 | Phase 5 | Pending |
-| NOTF-06 | Phase 5 | Pending |
-| NOTF-07 | Phase 5 | Pending |
-| NOTF-08 | Phase 5 | Pending |
-| NOTF-09 | Phase 5 | Pending |
-| NOTF-10 | Phase 5 | Pending |
-| NOTF-11 | Phase 5 | Pending |
-| NOTF-12 | Phase 5 | Pending |
-| NOTF-13 | Phase 5 | Pending |
-| NOTF-14 | Phase 5 | Pending |
-| NOTF-15 | Phase 5 | Pending |
+| NOTF-01 | Phase 5 | Complete |
+| NOTF-02 | Phase 5 | Complete |
+| NOTF-03 | Phase 5 | Complete |
+| NOTF-04 | Phase 5 | Complete |
+| NOTF-05 | Phase 5 | Complete |
+| NOTF-06 | Phase 5 | Complete |
+| NOTF-07 | Phase 5 | Complete |
+| NOTF-08 | Phase 5 | Complete |
+| NOTF-09 | Phase 5 | Complete |
+| NOTF-10 | Phase 5 | Complete |
+| NOTF-11 | Phase 5 | Complete |
+| NOTF-12 | Phase 5 | Complete |
+| NOTF-13 | Phase 5 | Complete |
+| NOTF-14 | Phase 5 | Complete |
+| NOTF-15 | Phase 5 | Complete |
 
 **Coverage:**
 - v1 requirements: 64 total

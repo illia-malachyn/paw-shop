@@ -89,7 +89,11 @@ Plans:
   2. GET /api/logs?level=X returns log entries filtered by level via LoggerProxy; GET /api/logs/stats returns counts by level
   3. All formatter+writer Bridge combinations (Text/JSON x Console/File) produce correct output
   4. Facade, Proxy, and Bridge unit and handler tests all pass
-**Plans**: TBD
+**Plans:** 1/3 plans executed
+Plans:
+- [x] 05-01-PLAN.md — Facade pattern: NotificationFacade with ConsoleNotifier + FileNotifier + unit tests
+- [x] 05-02-PLAN.md — Proxy + Bridge patterns: LoggerProxy + OutputWriter/Formatter + unit tests
+- [x] 05-03-PLAN.md — HTTP handlers for notification/logging endpoints + handler tests + route registration
 
 ## Progress
 
@@ -102,4 +106,4 @@ Phases execute in order: 1 -> 2 -> 3/4/5 (3, 4, 5 independent after Phase 2)
 | 2. Order Lifecycle | 3/3 | Complete    | 2026-04-07 |
 | 3. Search & Chat | 0/3 | Planning complete | - |
 | 4. Cart & Export | 3/3 | Complete   | 2026-04-07 |
-| 5. Notifications & Logging | 0/TBD | Not started | - |
+| 5. Notifications & Logging | 1/3 | In Progress|  |

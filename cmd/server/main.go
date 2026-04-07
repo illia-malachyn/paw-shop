@@ -16,6 +16,7 @@ func main() {
 	searchHandler := handler.NewSearchHandler()
 	chatHandler := handler.NewChatHandler()
 	cartHandler := handler.NewCartHandler()
+	notificationHandler := handler.NewNotificationHandler()
 
 	http.Handle("/", http.FileServer(http.Dir("./static")))
 	http.HandleFunc("/api/products", productHandler.HandleProducts)
@@ -32,6 +33,9 @@ func main() {
 	http.HandleFunc("/api/chat/", chatHandler.HandleChat)
 	http.HandleFunc("/api/cart", cartHandler.HandleCart)
 	http.HandleFunc("/api/cart/", cartHandler.HandleCart)
+	http.HandleFunc("/api/notifications/send", notificationHandler.HandleNotify)
+	http.HandleFunc("/api/logs", notificationHandler.HandleLogs)
+	http.HandleFunc("/api/logs/stats", notificationHandler.HandleLogStats)
 
 	port := ":8080"
 	fmt.Printf("PawShop server starting on http://localhost%s\n", port)
