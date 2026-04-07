@@ -11,12 +11,16 @@ import (
 func main() {
 	productHandler := handler.NewProductHandler()
 	bundleHandler := handler.NewBundleHandler()
+	discountHandler := handler.NewDiscountHandler()
 
 	http.Handle("/", http.FileServer(http.Dir("./static")))
 	http.HandleFunc("/api/products", productHandler.HandleProducts)
 	http.HandleFunc("/api/bundles", bundleHandler.HandleBuild)
 	http.HandleFunc("/api/bundles/templates", bundleHandler.HandleTemplates)
 	http.HandleFunc("/api/bundles/clone", bundleHandler.HandleClone)
+	http.HandleFunc("/api/discounts/apply", discountHandler.HandleApply)
+	http.HandleFunc("/api/discounts/undo", discountHandler.HandleUndo)
+	http.HandleFunc("/api/products/", discountHandler.HandleSubscribe) // /api/products/{id}/subscribe
 
 	port := ":8080"
 	fmt.Printf("PawShop server starting on http://localhost%s\n", port)
