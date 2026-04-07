@@ -54,19 +54,19 @@ Requirements for issues #4-#8. Each maps to one roadmap phase.
 
 ### Cart & Export (#7)
 
-- [ ] **CART-01**: Cart supports add, remove, and update quantity operations
-- [ ] **CART-02**: Memento saves cart state (deep copy) before each mutation
-- [ ] **CART-03**: CartHistory maintains stack of mementos for undo
-- [ ] **CART-04**: POST /api/cart/undo restores previous cart state
-- [ ] **CART-05**: POST /api/cart/add, POST /api/cart/remove endpoints
-- [ ] **CART-06**: GET /api/cart returns current cart state
-- [ ] **CART-07**: Visitor pattern with OrderVisitor interface (VisitItem, VisitCart methods)
-- [ ] **CART-08**: JSONExportVisitor generates JSON export
-- [ ] **CART-09**: TextReceiptVisitor generates human-readable receipt
-- [ ] **CART-10**: GET /api/cart/export?format=json|text returns formatted export
-- [ ] **CART-11**: Unit tests for Memento (save/restore, undo after add, undo after remove)
-- [ ] **CART-12**: Unit tests for Visitor (JSON export, text receipt, empty cart)
-- [ ] **CART-13**: HTTP handler tests for cart endpoints
+- [x] **CART-01**: Cart supports add, remove, and update quantity operations
+- [x] **CART-02**: Memento saves cart state (deep copy) before each mutation
+- [x] **CART-03**: CartHistory maintains stack of mementos for undo
+- [x] **CART-04**: POST /api/cart/undo restores previous cart state
+- [x] **CART-05**: POST /api/cart/add, POST /api/cart/remove endpoints
+- [x] **CART-06**: GET /api/cart returns current cart state
+- [x] **CART-07**: Visitor pattern with OrderVisitor interface (VisitItem, VisitCart methods)
+- [x] **CART-08**: JSONExportVisitor generates JSON export
+- [x] **CART-09**: TextReceiptVisitor generates human-readable receipt
+- [x] **CART-10**: GET /api/cart/export?format=json|text returns formatted export
+- [x] **CART-11**: Unit tests for Memento (save/restore, undo after add, undo after remove)
+- [x] **CART-12**: Unit tests for Visitor (JSON export, text receipt, empty cart)
+- [x] **CART-13**: HTTP handler tests for cart endpoints
 
 ### Notifications & Logging (#8)
 
@@ -149,19 +149,19 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SRCH-09 | Phase 3 | Pending |
 | SRCH-10 | Phase 3 | Pending |
 | SRCH-11 | Phase 3 | Pending |
-| CART-01 | Phase 4 | Pending |
-| CART-02 | Phase 4 | Pending |
-| CART-03 | Phase 4 | Pending |
-| CART-04 | Phase 4 | Pending |
-| CART-05 | Phase 4 | Pending |
-| CART-06 | Phase 4 | Pending |
-| CART-07 | Phase 4 | Pending |
-| CART-08 | Phase 4 | Pending |
-| CART-09 | Phase 4 | Pending |
-| CART-10 | Phase 4 | Pending |
-| CART-11 | Phase 4 | Pending |
-| CART-12 | Phase 4 | Pending |
-| CART-13 | Phase 4 | Pending |
+| CART-01 | Phase 4 | Complete |
+| CART-02 | Phase 4 | Complete |
+| CART-03 | Phase 4 | Complete |
+| CART-04 | Phase 4 | Complete |
+| CART-05 | Phase 4 | Complete |
+| CART-06 | Phase 4 | Complete |
+| CART-07 | Phase 4 | Complete |
+| CART-08 | Phase 4 | Complete |
+| CART-09 | Phase 4 | Complete |
+| CART-10 | Phase 4 | Complete |
+| CART-11 | Phase 4 | Complete |
+| CART-12 | Phase 4 | Complete |
+| CART-13 | Phase 4 | Complete |
 | NOTF-01 | Phase 5 | Pending |
 | NOTF-02 | Phase 5 | Pending |
 | NOTF-03 | Phase 5 | Pending |
