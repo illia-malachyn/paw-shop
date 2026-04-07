@@ -59,7 +59,11 @@ Plans:
   2. POST /api/chat/send routes messages through the Mediator; participants never hold direct references to each other
   3. GET /api/chat/history?participant=X returns messages for that participant
   4. Interpreter and Mediator unit and handler tests all pass
-**Plans**: TBD
+**Plans:** 3 plans
+Plans:
+- [ ] 03-01-PLAN.md — Interpreter pattern: Expression types, Parse function, unit tests
+- [ ] 03-02-PLAN.md — Mediator pattern: ChatMediator, participants, unit tests
+- [ ] 03-03-PLAN.md — HTTP handlers for search and chat, handler tests, route registration
 
 ### Phase 4: Cart & Export
 **Goal**: Users can manage a cart with undo support and export it in JSON or text format
@@ -92,6 +96,6 @@ Phases execute in order: 1 -> 2 -> 3/4/5 (3, 4, 5 independent after Phase 2)
 |-------|----------------|--------|-----------|
 | 1. Batch Orders | 2/2 | Complete    | 2026-04-07 |
 | 2. Order Lifecycle | 3/3 | Complete    | 2026-04-07 |
-| 3. Search & Chat | 0/TBD | Not started | - |
+| 3. Search & Chat | 0/3 | Planning complete | - |
 | 4. Cart & Export | 0/TBD | Not started | - |
 | 5. Notifications & Logging | 0/TBD | Not started | - |
