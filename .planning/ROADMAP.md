@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Batch Orders** - MacroCommand and Template Method for batch order actions and report generation (#4) (completed 2026-04-07)
 - [x] **Phase 2: Order Lifecycle** - State, Iterator, and Chain of Responsibility for order transitions, listing, and validation (#5) (completed 2026-04-07)
 - [ ] **Phase 3: Search & Chat** - Interpreter for product search and Mediator for support chat (#6)
-- [ ] **Phase 4: Cart & Export** - Memento for undo and Visitor for cart export (#7)
+- [x] **Phase 4: Cart & Export** - Memento for undo and Visitor for cart export (#7) (completed 2026-04-07)
 - [ ] **Phase 5: Notifications & Logging** - Facade for notifications, Proxy for logging, Bridge for output formatting (#8)
 
 ## Phase Details
@@ -74,7 +74,11 @@ Plans:
   2. GET /api/cart returns current cart contents
   3. GET /api/cart/export?format=json returns a JSON export; ?format=text returns a human-readable receipt
   4. Memento and Visitor unit and handler tests all pass
-**Plans**: TBD
+**Plans:** 3/3 plans complete
+Plans:
+- [x] 04-01-PLAN.md — Memento pattern: Cart, CartMemento, CartHistory + unit tests
+- [x] 04-02-PLAN.md — Visitor pattern: OrderVisitor, JSONExportVisitor, TextReceiptVisitor + unit tests
+- [x] 04-03-PLAN.md — HTTP handlers for cart endpoints, handler tests, route registration
 
 ### Phase 5: Notifications & Logging
 **Goal**: Notifications are sent through a unified facade, logs are filtered via a proxy, and output is formatted through a bridge
@@ -97,5 +101,5 @@ Phases execute in order: 1 -> 2 -> 3/4/5 (3, 4, 5 independent after Phase 2)
 | 1. Batch Orders | 2/2 | Complete    | 2026-04-07 |
 | 2. Order Lifecycle | 3/3 | Complete    | 2026-04-07 |
 | 3. Search & Chat | 0/3 | Planning complete | - |
-| 4. Cart & Export | 0/TBD | Not started | - |
+| 4. Cart & Export | 3/3 | Complete   | 2026-04-07 |
 | 5. Notifications & Logging | 0/TBD | Not started | - |
