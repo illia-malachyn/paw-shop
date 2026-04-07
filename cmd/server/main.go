@@ -13,9 +13,12 @@ func main() {
 	bundleHandler := handler.NewBundleHandler()
 	discountHandler := handler.NewDiscountHandler()
 	orderHandler := handler.NewOrderHandler()
+	searchHandler := handler.NewSearchHandler()
+	chatHandler := handler.NewChatHandler()
 
 	http.Handle("/", http.FileServer(http.Dir("./static")))
 	http.HandleFunc("/api/products", productHandler.HandleProducts)
+	http.HandleFunc("/api/products/search", searchHandler.HandleSearch)
 	http.HandleFunc("/api/bundles", bundleHandler.HandleBuild)
 	http.HandleFunc("/api/bundles/templates", bundleHandler.HandleTemplates)
 	http.HandleFunc("/api/bundles/clone", bundleHandler.HandleClone)
@@ -25,6 +28,7 @@ func main() {
 	http.HandleFunc("/api/orders/batch", orderHandler.HandleBatch)
 	http.HandleFunc("/api/orders/", orderHandler.HandleOrders)
 	http.HandleFunc("/api/reports/", orderHandler.HandleReport)
+	http.HandleFunc("/api/chat/", chatHandler.HandleChat)
 
 	port := ":8080"
 	fmt.Printf("PawShop server starting on http://localhost%s\n", port)
