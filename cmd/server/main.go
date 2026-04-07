@@ -23,6 +23,7 @@ func main() {
 	http.HandleFunc("/api/discounts/undo", discountHandler.HandleUndo)
 	http.HandleFunc("/api/products/", discountHandler.HandleSubscribe) // /api/products/{id}/subscribe
 	http.HandleFunc("/api/orders/batch", orderHandler.HandleBatch)
+	http.HandleFunc("/api/orders/", orderHandler.HandleOrders)
 	http.HandleFunc("/api/reports/", orderHandler.HandleReport)
 
 	port := ":8080"
