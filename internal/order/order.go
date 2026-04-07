@@ -4,9 +4,35 @@ import "fmt"
 
 // Order — замовлення в магазині.
 type Order struct {
-	ID     string
-	Status string // "new", "confirmed", "rejected"
-	Items  []string
+	ID     string   `json:"id"`
+	Status string   `json:"status"` // синхронізований з state.Name()
+	Items  []string `json:"items"`
+	state  OrderState
+}
+
+// NewOrder — створює нове замовлення у початковому стані "new".
+func NewOrder(id string, items []string) *Order {
+	return &Order{
+		ID:     id,
+		Items:  items,
+		state:  &NewState{},
+		Status: "new",
+	}
+}
+
+// Next — переводить замовлення до наступного стану (State pattern).
+func (o *Order) Next() error {
+	return o.state.Next(o)
+}
+
+// Cancel — скасовує замовлення, якщо це допускається поточним станом.
+func (o *Order) Cancel() error {
+	return o.state.Cancel(o)
+}
+
+// GetState — повертає поточний стан замовлення.
+func (o *Order) GetState() OrderState {
+	return o.state
 }
 
 // OrderCommand — інтерфейс команди для замовлення.
