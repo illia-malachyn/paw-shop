@@ -1,4 +1,6 @@
 .idea/
 *.pdf
 TASKS.md
+CLAUDE.md
 .claude/
+.planning/
